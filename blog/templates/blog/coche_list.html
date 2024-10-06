@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listado coches</title>
+    </head>
+    <body>
+        <h1>Listado coches</h1>
+        <h2><a href="/propietario_list">Listado propietarios</a></h2>
+
+        {% for coche in coches_mostrar %}
+            <article>
+                <h2>Coche: {{ coche.marca }}</h2>
+                <p>Ruedas: {{coche.ruedas}}</p>
+                <p>Cilindrada: {{coche.cilindrada}}</p>
+                <br>
+            </article>
+        {% endfor %}
+    </body>
+</html>

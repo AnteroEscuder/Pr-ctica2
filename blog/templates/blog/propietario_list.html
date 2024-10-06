@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listado Propietario</title>
+    </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <body>
+        <div class="container mt-4">
+        <h1>Listado propietarios</h1>
+        <h2><a href="/coche_list">Listado coches</a></h2>
+        {% for propietario in propietarios_mostrar %}
+            <article>
+                <h2>Nombre: {{ propietario.nombre }}</h2>
+                <p>Edad: {{propietario.edad}}</p>
+                <p>Localidad: {{propietario.localidad}}</p>
+                <br>
+            </article>
+            <div class="card mb-3">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{ propietario.nombre }}</h5>
+                  <p class="card-text">Edad: {{propietario.edad}}</p>
+                  <p class="card-text">Localidad: {{propietario.localidad}}</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        {% endfor %}
+    </div>
+    </body>
+</html>
